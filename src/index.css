@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@font-face {
+  font-family: "hbicons";
+  src: url("./fonts/icomoon.eot");
+  src: url("./fonts/icomoon.eot") format("embedded-opentype"),
+    url("./fonts/icomoon.ttf") format("truetype"),
+    url("./fonts/icomoon.woff") format("woff"),
+    url("./fonts/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+body {
+  font-family: "Roboto";
+}
+*{
+  box-sizing: border-box;
+}
+:root{
+  --darkBlue: #172c45;
+  --lightBlue: #16d499;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "hbicons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-search:before {
+  content: "\e986";
+}
+
+.icon-star-empty:before {
+  content: "\e9d7";
+}
+.icon-star-full:before {
+  content: "\e9d9";
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 1920px;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+.content {
+  padding: 2rem 0;
+}
+.flexColumn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  color: var(--lightBlue);
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.error {
+  color: red;
+  margin: .5rem;
+}

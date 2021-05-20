@@ -1,0 +1,27 @@
+.hbButton button {
+  display: inline-block;
+  padding: 0.5em 3em;
+  margin: 0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.15s;
+  background-color: var(--darkBlue);
+  font-size: 20px;
+  margin: 1rem auto;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.hbButton button:hover, .hbButton button:active {
+  background: var(--lightBlue);
+}
+.hbButton button:hover {
+  transform: scale(1.05);
+}
+.hbButton button:active {
+  transform: scale(0.95);
+}
