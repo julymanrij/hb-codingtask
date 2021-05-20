@@ -11,7 +11,7 @@ const ListRepositories = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [searchText, setSearchText] = useState("");
   const [filterFavorites, setFilterFavorites] = useState(false);
-  const { loading, error, data, refetch } = useQuery(GET_USER);
+  const { loading, error, data } = useQuery(GET_USER);
 
   useEffect(() => {
     const token = sessionStorage.getItem("token");

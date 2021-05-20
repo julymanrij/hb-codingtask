@@ -12,6 +12,7 @@ const HbUser = () => {
   
   useEffect(() => {
     const userData = JSON.parse(sessionStorage.getItem("userData"));
+    console.log(userData);
     if (userData) {
       setNameUser(userData.name);
     }
@@ -29,7 +30,7 @@ const HbUser = () => {
   return (
     <div className="hbUser flexColumn">
       <h2>{nameUser}</h2>
-      <img src={data.viewer.avatarUrl}></img>
+      <img src={data.viewer.avatarUrl} alt="Profile"></img>
       <p>{data.viewer.bio}</p>
       <a className="userName" href={data.viewer.url} target="blank">
         {data.viewer.login}
