@@ -1,9 +1,10 @@
 import './styles.css';
+import HbUser from '../../components/hbUser';
 
 const Profile = () => {
   return (
     <section className="profile container content">
-      <h1>Landing</h1>
+      <HbUser></HbUser>
     </section>
   );
 }

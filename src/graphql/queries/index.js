@@ -3,7 +3,11 @@ import { gql } from "@apollo/client";
 export const GET_USER = gql`
   query {
     viewer {
-      login
+      login, 
+      avatarUrl,
+      bio,
+      name,
+      url
     }
   }
 `;
@@ -18,7 +22,8 @@ export const GET_REPOSITORIES = gql`
           id
           name
           description
-          viewerHasStarred
+          viewerHasStarred, 
+          createdAt
         }
       }
     }

@@ -18,8 +18,9 @@ const Repository = (props) => {
 
   return (
     <div className="repository">
-      <a className="repoTitle" href={props.url}>{props.name}</a>
+      <a className="repoTitle" href={props.url} target="blank">{props.name}</a>
       <p>{props.description}</p>
+      <span>{props.createdAt}</span>
       {props.viewerHasStarred && (
         <div
           className="starIconButton"

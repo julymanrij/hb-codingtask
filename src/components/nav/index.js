@@ -1,7 +1,13 @@
 import "./styles.css";
 import { NavLink, Link } from "react-router-dom";
 import Logo from "../logo";
+import HbButton from "../hbButton";
 const Nav = (props) => {
+  const logOut = () => {
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("userData");
+    window.location.href = "/";
+  };
   return (
     <nav className="container">
       <Link to="/" className="logo">
@@ -17,6 +23,9 @@ const Nav = (props) => {
           <NavLink to="/list-repositories" exact activeClassName="active">
             List Repositories
           </NavLink>
+        </li>
+        <li>
+          <HbButton type="submit" text="LogOut" onclick={logOut}></HbButton>
         </li>
       </ul>
     </nav>

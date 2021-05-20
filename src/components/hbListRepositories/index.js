@@ -15,7 +15,7 @@ const HbListRepositories = (props) => {
         <Loader type="Puff" color="#16d499" size={10} />
       </div>
     );
-  if (error) return <p>Error 2:(</p>;
+  if (error) return <span className="error">{error}</span>;
 
   return (
     <ul className="repositories">
@@ -26,7 +26,7 @@ const HbListRepositories = (props) => {
               repo.name.toUpperCase().includes(props.search.toUpperCase()) ||
               props.search === ""
           )
-          .map(({ name, id, description, url, viewerHasStarred }) => (
+          .map(({ name, id, description, url, viewerHasStarred,createdAt }) => (
             <li key={id}>
               <Repository
                 name={name}
@@ -35,6 +35,7 @@ const HbListRepositories = (props) => {
                 viewerHasStarred={viewerHasStarred}
                 id={id}
                 user={props.user}
+                createdAt={createdAt}
               ></Repository>
             </li>
           ))}
@@ -47,7 +48,7 @@ const HbListRepositories = (props) => {
               props.search === ""
           )
           .filter((repo) => repo.viewerHasStarred)
-          .map(({ name, id, description, url, viewerHasStarred }) => (
+          .map(({ name, id, description, url, viewerHasStarred,createdAt }) => (
             <li key={id}>
               <Repository
                 name={name}
@@ -56,6 +57,7 @@ const HbListRepositories = (props) => {
                 viewerHasStarred={viewerHasStarred}
                 id={id}
                 user={props.user}
+                createdAt={createdAt}
               ></Repository>
             </li>
           ))}
